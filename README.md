@@ -1,2 +1,2 @@
-# Internship_Tech-a-intern
+# Internship_Tech-a-Intern
 PROJECTS(BATCH-IP3)
