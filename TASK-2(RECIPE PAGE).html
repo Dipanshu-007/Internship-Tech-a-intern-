@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flavorsome Recipes</title>
+    <style>
+
+html{
+    scroll-behavior: smooth;
+}
+header{
+width: 100%;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 100px;
+background: #acb4b5;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(hero.png);
+    background-position: center;
+    background-size: cover;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #213032;
+    margin-right: 40px;
+}
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+.nav-bar ul li a{
+    display: block;
+    color: #edffef;
+    font-size: 20px;
+    padding: 8px 25px;
+    transition: .2s;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.nav-bar ul li:hover a{
+    background-color: #97a2a3;
+    color: #213032;
+    cursor: pointer;
+}
+.content{
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: #213032;
+    font-size: 75px;
+    margin: 20px 0px 20px;
+}
+h3{
+    color: #edffef;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color: #edffef;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.button{
+position: absolute;
+background-color: #213032;
+color: #fff;
+text-decoration: none;
+border: 2px solid black;
+font-weight: bold;
+padding: 13px 30px;
+transform: .4s;
+}
+.button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #314e52;
+}
+.about img{
+    height: auto;
+    width: 430px;
+    border-radius: 20px 0 20px 0;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about h2{
+    color:#edffef;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.about-text p{
+    color: #97a2a3;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+.about-text{
+    width: 500px;
+}
+/*Recipe Section CSS*/
+.recipe{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #213032;
+}
+.recipe h2{
+    color: #edffef;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.box .card img{
+    width: 100%;
+    height: 1005;
+    object-fit: cover;
+   
+}
+.box .card .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #edffef;
+    color: #182f32;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.box .card:hover .content{
+    opacity: 1;
+}
+.card h3{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #213032;
+}
+.box .card p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.box .card button{
+    position:relative;
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    transform:.4s;
+    padding: 13px 30px;
+ }
+ .box .card button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+ }
+ 
+/*Contact form*/
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background: #182f32;
+}
+.contact-info,.contact-form{
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    text-align: center;
+    color: #edffef;
+    font-size: 25px;
+}
+.contact-info h2, .contact-form h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #edffef;
+}
+.contact-form form{
+    text-align: center;
+}
+.contact-form label, 
+.contact-form input , 
+.contact-form textarea ,
+ .contact-form button {
+display: block;
+width: 100%;
+margin-bottom: 10px;
+}
+.contact-form button{
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    transform:.4s;
+    padding: 10px 0px;
+}
+.contact-form button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.contact-form label{
+    text-align: left;
+    color: #edffef;
+}
+.contact-form input, .contact-form textarea{
+    padding: 8px;
+}
+.contact-info p{
+padding: 15px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.social-icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    color: #97a2a3;
+    text-align: center;
+    line-height: 40px;
+    font-size: 38px;
+}
+.social-icon:hover{
+    color: #314e52;
+    cursor: pointer;
+}
+footer{
+    padding: 20px 0;
+    background: #182f32;
+}
+footer h5{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+    color: #97a2a3;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Flavoursome Recipes</div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="content">
+            <h4>Unleash Your Culinary Passion</h4>
+            <h1>Discover Taste Sensations</h1>
+            <h3>Elevate Your Cooking Game</h3>
+            <div class="button">Start Cooking</div>
+        </div>
+    </div>
+    <!----About Section Start---------------------------------->
+    <section class="about">
+        <h2>About Us</h2>
+        <div class="main">
+            <img src="C:\Users\91857\Downloads\20 Indian Thali Ideas.jfif" alt="">
+            <div class="about-text">
+                <p>Welcome to our recipe website, where culinary inspiration meets delicious creations! Whether you're a
+                    seasoned chef or a passionate home cook, we are here to ignite your taste buds and guide you on a
+                    delightful culinary journey. Our extensive collection of recipes covers a wide range of cuisines,
+                    from comforting classics to innovative fusion dishes. Each recipe is thoughtfully crafted, tested,
+                    and presented with step-by-step instructions, ensuring that even the novice cook can create
+                    extraordinary meals. We believe that cooking is an art form that brings people together, and our
+                    goal is to empower you to explore your culinary creativity and make every meal a masterpiece. So
+                    come on in, explore our diverse recipe collection, and let's embark on a delightful gastronomic
+                    adventure together!</p>
+
+            </div>
+        </div>
+    </section>
+    <!-----Recipes Section Start---------------------------------->
+    <div class="recipe">
+        <h2>Featured Recipes</h2>
+        <div class="box">
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r1.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 1</h3>
+                    <P>Bhartiya Thaali </P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r2.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 2</h3>
+                    <P>Biryani</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r3.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 3</h3>
+                    <P>Chicken Tari</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r4.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 4</h3>
+                    <P>Paneer Naan Special</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r5.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 5</h3>
+                    <P>Samosa</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r6.png" alt="">
+                <div class="content">
+                    <h3>Recipe 6</h3>
+                    <P>Fried Chicken</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r7.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 7</h3>
+                    <P>Manchurian dish</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\91857\Downloads\r8.jfif" alt="">
+                <div class="content">
+                    <h3>Recipe 8</h3>
+                    <P>Dosha Indian special</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------contact section-------------------------->
+    <section class="contact">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 123 N Main street,India</p>
+            <p><strong>Phone:</strong>1234567890</p>
+            <p><strong>Email:</strong>info@example.com</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"  required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+<footer>
+    <div class="social-icons">
+        <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>
+        <a href="#" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+        <a href="#" class="social-icon"> <i class="fab fa-instagram"></i> </a>
+    </div>
+    <h5>By Flavoursome Recipes </h5>
+</footer>
+</body>
+
+</html
